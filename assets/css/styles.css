@@ -1,0 +1,15 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: 100vh;
+    text-align: center;
+    background-size: auto;
+    background: url(../img/background.jpg) no-repeat center center/cover;
+}
+
+.presentation {
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15%;
+}
