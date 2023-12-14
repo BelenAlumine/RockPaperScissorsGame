@@ -35,6 +35,10 @@ body {
     height: 70vh;
 }
 
+.option:hover {
+    opacity: 0.2;
+}
+
 .opponent {
     background-color:brown;
     height: 70vh;
@@ -43,7 +47,7 @@ body {
     align-items: center;
 }
 
-.button {
+.button-play {
     display: flex;
     align-items: center;
     justify-content: center;   
