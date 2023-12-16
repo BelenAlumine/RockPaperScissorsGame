@@ -30,6 +30,11 @@ body {
     height: 80vh;
 }
 
+#optionImg {
+    width: 20vh;
+    height: 20vh;
+}
+
 .options {
     background-color:blueviolet;
     display: grid;
@@ -51,6 +56,8 @@ body {
     justify-content: center;
     align-items: center;
 }
+
+
 
 .button-play {
     display: flex;
