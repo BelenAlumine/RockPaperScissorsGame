@@ -3,6 +3,7 @@ const paper = document.querySelector('.Opaper');
 const scissors = document.querySelector('.Oscissors');
 const play = document.querySelector('.button-play');
 const options = ['rock', 'paper', 'scissors'];
+let resultTitle = document.getElementById("title1");
 let playerValue;
 let opponentValue;
 
@@ -47,17 +48,16 @@ const results = {
     'paper-scissors' : 'The opponent chose scissors, you lose!',
     'scissors-rock' : 'The opponent chose rock, you lose!',
 
-    'scissors-scissors' : 'The opponent scissors, you tied!',
-    'rock-rock' : 'The opponent rock, you tied!',
-    'paper-paper' : 'The opponent paper, you tied!',
+    'scissors-scissors' : 'The opponent chose scissors, you tied!',
+    'rock-rock' : 'The opponent chose rock, you tied!',
+    'paper-paper' : 'The opponent chose paper, you tied!',
 }
 
 function checkResult(playerValue) {
     opponentValue = getRandom(options)
-    result = opponentValue + '-' + playerValue;
+    result = playerValue + '-' + opponentValue;
     
-    
-    return alert(results[result]);
+    resultTitle.innerText = results[result];
 }
 
 function getRandom(options) {
