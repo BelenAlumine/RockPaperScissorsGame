@@ -67,3 +67,21 @@ body {
     align-items: center;
     justify-content: center;   
 }
+
+
+
+/*Responsive content*/
+@media screen and (max-width: 767px) {
+    .navbar-brand {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .overlay p {
+        font-size: 18px;
+    }
+    .overlay i {
+        font-size: 40px;
+    }
+}
