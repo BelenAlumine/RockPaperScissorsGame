@@ -7,9 +7,9 @@ let playerValue;
 let opponentValue;
 
 ////////////////////////////////////
-const rockImg = './img/Rock.png';
-const paperImg = './img/Paper.png';
-const scissorsImg = './img/Sccissor.png';
+const rockImg = '../img/Rock.png';
+const paperImg = '../img/Paper.png';
+const scissorsImg = '../img/Scissors.png';
 let opponentOption = document.querySelector('.question-Mark');
 ////////////////////////////////////
 
@@ -19,41 +19,66 @@ scissors.addEventListener('click', () => choose('scissors'));
 play.addEventListener('click', () => checkResult(playerValue));
 
 function choose(option) {
+    //playerValue.remove(option:hover);
     playerValue = option;
+    
+    if (playerValue === 'rock') {
+        paper.style.opacity = '100';
+        scissors.style.opacity = '100';
+        rock.style.opacity = '0.2';
+    }
+    else if (playerValue === 'paper') {
+        rock.style.opacity = '100';
+        scissors.style.opacity = '100';
+        paper.style.opacity = '0.2';
+    }
+    else if (playerValue === 'scissors') {
+        paper.style.opacity = '100';
+        rock.style.opacity = '100';
+        scissors.style.opacity = '0.2';
+    }
+}
+
+
+function nameOption(option) {
+    if (option === rock) {
+        return 'rock';
+    }
+    else if (option === paper) {
+        return 'paper';
+    }
+    else if (option === scissors) {
+        return 'scissors';
+    }
 }
 
 function checkResult(playerValue) {
     opponentValue = getRandom(options)
+    opponentOption.setAttribute('src', imgValue(opponentValue));
 
     if (playerValue === 1) {
         if (opponentValue === 0) {
-            //opponentOption.setAttribute('src', imgValue(opponentValue));
             return alert('oponnent choose ' + opponentValue + ' You win!');
         }
         else if (opponentValue === 1) {
-            //opponentOption.setAttribute('src', imgValue(opponentValue));
             return alert('oponnent choose ' + opponentValue + ' You tie, try again!');
         }
     }
     
     if (playerValue === 'rock') {
         if (opponentValue === 'scissors') {
-            //opponentOption.setAttribute('src', imgValue(opponentValue));
             return alert('oponnent choose ' + opponentValue + ' You win!');
         }
         else if (opponentValue === 'rock') {
-            //opponentOption.setAttribute('src', imgValue(opponentValue));
             return alert('oponnent choose ' + opponentValue + ' You tie, try again!');
         }
     }
     
     if (playerValue === 'scissors') {
         if (opponentValue === 'paper') {
-            //opponentOption.setAttribute('src', imgValue(opponentValue));
             return alert('oponnent choose ' + opponentValue + ' You win!');
         }
         else if (opponentValue === 'scissors') {
-            //opponentOption.setAttribute('src', imgValue(opponentValue));
             return alert('oponnent choose ' + opponentValue + ' You tie, try again!');
         }
     }
@@ -64,19 +89,19 @@ function checkResult(playerValue) {
 
 function getRandom(options) {
     opponentValue = options[Math.floor(Math.random() * options.length)]; 
-    opponentOption.setAttribute('src', imgValue(opponentValue));
+ //   opponentOption.setAttribute('src', imgValue(opponentValue));
     
     return opponentValue;
 }
 
 function imgValue(opponentValue) {
     if (opponentValue === 'rock') {
-        rockImg;
+        return rockImg;
     }
     else if (opponentValue === 'paper') {
-        paperImg;
+        return paperImg;
     }
     else if (opponentValue === 'scissors') {
-        scissorsImg;
+        return scissorsImg;
     }
 }
