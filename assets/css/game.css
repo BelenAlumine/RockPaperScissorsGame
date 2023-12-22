@@ -11,19 +11,23 @@ body {
 
 .game-container {
     background: url(../img/background.jpg) no-repeat center center/cover;
-    /*background-color:aquamarine;*/
     align-items: center;
     justify-content: center;
     display: grid;
     height: 100vh;
 }
 
+.results {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
 .players {
-    background-color: transparent/*pink*/;
+    background-color: transparent;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-auto-rows: max-content auto;
-    
     align-items: center;
     justify-content: center;
     width: 80vw;
@@ -33,11 +37,19 @@ body {
 #optionImg {
     width: 20vh;
     height: 20vh;
-    padding: 5%;
+    /*padding: 5%;*/
+    margin-top: 2%;
+    margin-bottom: 2%;
+    border-radius: 100%;
+    border-style: solid;
+    border-color: black;
 }
 
 .options {
     background-color:blueviolet;
+    border-radius: 2%;
+    border-style: solid;
+    border-color: black;
     display: grid;
     grid-auto-rows: min-content;
     margin: 5% 5% 5% 5%;
@@ -53,14 +65,15 @@ body {
 
 .opponent {
     background-color:brown;
+    border-radius: 2%;
+    border-style: solid;
+    border-color: black;
     height: 70vh;
     margin: 5% 5% 5% 5%;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-
-
 
 .button-play {
     display: flex;

@@ -3,7 +3,7 @@ const paper = document.querySelector('.Opaper');
 const scissors = document.querySelector('.Oscissors');
 const play = document.querySelector('.button-play');
 const options = ['rock', 'paper', 'scissors'];
-let resultTitle = document.getElementById("title1");
+let resultTitle = document.getElementById("header-result");
 let playerValue;
 let opponentValue;
 
