@@ -21,7 +21,7 @@ play.addEventListener('click', () => checkResult(playerValue));
 
 function choose(option) {
     playerValue = option;
-    
+
     if (playerValue === 'rock') {
         paper.style.opacity = '100';
         scissors.style.opacity = '100';
@@ -51,12 +51,16 @@ const results = {
     'scissors-scissors' : 'The opponent chose scissors, you tied!',
     'rock-rock' : 'The opponent chose rock, you tied!',
     'paper-paper' : 'The opponent chose paper, you tied!',
+
+    'undefined-paper' : 'Choose an option',
+    'undefined-scissors' : 'Choose an option',
+    'undefined-rock' : 'Choose an option',
 }
 
 function checkResult(playerValue) {
     opponentValue = getRandom(options)
     result = playerValue + '-' + opponentValue;
-    
+
     resultTitle.innerText = results[result];
 }
 
