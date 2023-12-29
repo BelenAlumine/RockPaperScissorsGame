@@ -18,6 +18,8 @@ body {
 }
 
 .results {
+    margin-top: 2%;
+    border-radius: 15%;
     align-items: center;
     justify-content: center;
     display: flex;
@@ -46,10 +48,9 @@ body {
 }
 
 .options {
-    background-color:blueviolet;
+    background-color:rgb(108, 68, 145);
     border-radius: 2%;
-    border-style: solid;
-    border-color: black;
+    border: 2px solid black;
     display: grid;
     grid-auto-rows: min-content;
     margin: 5% 5% 5% 5%;
@@ -65,10 +66,9 @@ body {
 }
 
 .opponent {
-    background-color:brown;
+    background-color:rgb(148, 57, 57);
     border-radius: 2%;
-    border-style: solid;
-    border-color: black;
+    border: 2px solid black;
     height: 70vh;
     margin: 5% 5% 5% 5%;
     display: flex;
@@ -82,7 +82,11 @@ body {
     justify-content: center;   
 }
 
-
+.btn {
+    color: black;
+    font-weight: solid;
+    border: black;
+}
 
 /*Responsive content*/
 @media screen and (max-width: 767px) {
